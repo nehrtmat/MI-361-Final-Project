@@ -9,12 +9,15 @@
     text-align: -webkit-center;
 
   }
+  body.subpage{
+    background: #f0f4f6;
+  }
   
   section{
     width: 1180px;
   }
   section.top-menu{
-    width: 90%;
+    width: 100%;
   }
   nav {
     color: #333;
@@ -212,7 +215,6 @@
       position: relative;
     }
     .about {
-    max-width: 800px;
     margin: 0 auto 50px;
     text-align: center;
     }
@@ -223,56 +225,51 @@
     color: #2391ff;
     }
     
-    .about p {
+    .about p, p {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 20px;
     }
     
-    .developers {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-    }
     
-    .developers h2 {
+    .devs-container h2, h2 {
     font-size: 36px;
     margin-bottom: 30px;
     }
     
-    .developers ul {
+    .devs-container ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
     }
     
-    .developers li {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 20px;
-    max-width: 300px;
-    padding: 20px;
+    .devs-container li {
+      padding: 20px;
+      width: 33%;
     }
     
-    .developers img {
-    border-radius: 50%;
-    height: 100px;
-    margin-bottom: 20px;
-    width: 100px;
+    .devs-container img {
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
     }
     
-    .developers h3 {
+    .devs-container h3 {
     font-size: 24px;
     margin: 0;
     }
     
-    .developers p {
+    .devs-container p {
     font-size: 18px;
     margin-bottom: 20px;
+    margin: 0;
+    color: #2391ff;
     }
     
     footer {
@@ -312,3 +309,110 @@
     max-width: 100%;
     }
     }
+    #contact-form{
+      display: flex;
+      align-items: center;
+    }
+    #contact-form #contact-info{
+      width: 40%;
+      text-align-last: center;
+    }
+    #contact-form .contact-col{
+      width: 60%;
+    }
+    #contact-form form{
+      display: table;
+    }
+    #contact-form form input{
+      box-shadow: (0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;      
+      padding: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    #contact-form form #fname, #contact-form form #lname{
+      width: 48.5%;
+    }
+    #contact-form form #fname{
+      margin-right: 10px;
+    }
+    #contact-form form #lname{
+      margin-left: 10px;
+    }
+    #contact-form form #email, #contact-form form #message{
+      width: 100%;
+    }
+    #contact-form form #message{
+      min-height: 200px;
+
+    }
+    #contact-form form #submit{
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #2391ff;
+      color: #fff;
+      border-radius: 20px;
+    }
+    #contact-form{
+      min-height: 600px;
+    }
+    body.subpage main section{
+      background: #fff;
+      padding: 30px;
+      text-align: left;
+      margin: 40px 0px;
+    }
+    body.subpage main section h2{
+      color: #2391ff;
+    }
+    h2{
+      text-transform: uppercase;
+    }
+    
+    /* relevant styles */
+    .img__wrap {
+      position: relative;
+    }
+    
+    .img__description {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: hsla(210, 100%, 57%, 0.726);
+      color: #fff !important;
+      visibility: hidden;
+      opacity: 0;
+      height: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-y: scroll;
+      /* transition effect. not necessary */
+      text-align: center;
+      transition: opacity .2s, visibility .2s;
+    }
+
+    
+    .img__wrap:hover .img__description {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+  /*       ScrollBar 2        */
+  
+    .img__description::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .img__description::-webkit-scrollbar-track {
+      background-color: transparent;
+      border: 1.5px solid #2391ff;
+      border-radius: 8px;
+    }
+
+    .img__description::-webkit-scrollbar-thumb {
+      background-color: #f1f1f1bd;
+      border: 2px solid #2391ff;
+      border-radius: 8px;
+    }
+
